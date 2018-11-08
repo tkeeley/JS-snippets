@@ -1,0 +1,36 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<style>
+  *:focus {outline: none;}
+  input{width: 20%;}
+  .btn{width: 120px; height: 20px; padding: 10px; border-radius: 10px; margin-left: 2%;}
+  .saveButton{background-color: green; color: white; z-index: 1; padding: inherit;}
+  .cancelButton{background-color: red; color: white; z-index: 1; padding: inherit;}
+  .edited {background: none repeat scroll 0 0; cursor: default !important; color:lightgrey; z-index: -9 !important; text-decoration: none; padding: inherit; pointer-events: none;}
+</style>
+<div>
+  Field: <input id="field"></input>
+</div>
+<br>
+<br>
+<div class="edited">
+  <button class="btn saveButton edited">Save</button>
+  <button class="btn cancelButton edited">Edit</button>
+</div>
+<script>
+$("input[type='text'], input").on("input", function () {    	
+  xtoggleColor();
+});
+function xtoggleColor(){  
+  var x = false;  
+    $("input[type='text'], input").each(function(){
+      if($(this).val()==''){
+        x = true;
+      }
+    });
+  if(x){
+    $('.btn').addClass("edited");
+  }else{
+    $('.btn').removeClass("edited");
+  }
+}
+</script>
