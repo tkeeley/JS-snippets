@@ -4,5 +4,5 @@ for (i = 0; i < 5; i++) { //replace i <=5 with i<={your_variable}
 }
 sum = myArray.reduce(function(a, b) { //some sort of js wizardry that bounces array values into straight ints
   return a + b; //returns the the array as ints added together
-}, 0); //I don't know why this works but it didn't sork without it
+}, 0); //I don't know why this works but it didn't work without it
 alert(sum); //alerts sum of array values
