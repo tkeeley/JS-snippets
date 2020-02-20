@@ -1,0 +1,8 @@
+myArray = []; //empty array to push values to
+for (i = 0; i < 5; i++) { //replace i <=5 with i<={your_variable}
+  myArray.push(i); //pushes each i to the array
+}
+sum = myArray.reduce(function(a, b) { //some sort of js wizardry that bounces array values into straight ints
+  return a + b; //returns the the array as ints added together
+}, 0); //I don't know why this works but it didn't sork without it
+alert(sum); //alerts sum of array values
